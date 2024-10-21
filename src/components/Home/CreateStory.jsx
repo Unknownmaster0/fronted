@@ -46,7 +46,7 @@ const CreateStory = () => {
       );
       console.log("Story created:", response.data);
       addStory(response.data.data); // Update local context or state with the new story
-      navigate("/storypage"); // Navigate to the Stories page after submission
+      navigate("/stories"); // Navigate to the Stories page after submission
     } catch (error) {
       console.error("Error creating story:", error);
       setErrorMessage("Failed to submit the story. Please try again.");

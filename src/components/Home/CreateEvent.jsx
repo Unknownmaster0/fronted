@@ -38,13 +38,24 @@ const CreateEvent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const token = localStorage.getItem("token"); // Retrieve token from localStorage inside handleSubmit
+
+    if (!token) {
+      setErrorMessage(
+        "You are not authorized to create an event. Please log in."
+      );
+      return;
+    }
+
+    setIsSubmitting(true); // Set submitting state
+
     try {
       const response = await axios.post(
         "http://localhost:8000/api/v1/user/event/createEvent",
         formData,
         {
           headers: {
-            Authorization: `${token}`,
+            Authorization: `${token}`, // Include 'Bearer' before the token
           },
         }
       );
@@ -64,6 +75,7 @@ const CreateEvent = () => {
         presenterName: "",
         presenterLink: "",
       });
+      navigate("/event");
     } catch (error) {
       const errorMsg =
         error.response?.data?.message ||
@@ -80,7 +92,7 @@ const CreateEvent = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="mt-20 flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
           Create a New Event

@@ -55,24 +55,35 @@ const StoryDetailPage = () => {
   }
 
   return (
-    <div className="mt-20 min-h-screen bg-gray-100 py-10 flex justify-center">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">{story.title}</h1>
-        <p className="text-gray-600 mb-4">{story.description}</p>
-        <p className="text-gray-800 mb-4">
-          <span className="font-bold">Date:</span>{" "}
-          {new Date(story.date).toLocaleDateString()}
-        </p>
-        {story.author && (
-          <p className="text-gray-800 mb-4">
-            <span className="font-bold">Author:</span> {story.author}
+    <div className="mt-20 min-h-screen bg-gradient-to-b from-blue-100 to-white py-10 flex justify-center">
+      <div className="max-w-3xl w-full mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+        <div className="p-10 md:p-14">
+          <h1 className="text-5xl font-extrabold text-gray-800 mb-6 break-words">
+            {story.title}
+          </h1>
+          <p className="text-xl text-gray-600 mb-6 italic">
+            {story.description}
           </p>
-        )}
-        {story.content && (
-          <p className="text-gray-800">
-            <span className="font-bold">Content:</span> {story.content}
-          </p>
-        )}
+
+          <div className="mb-6">
+            <p className="text-lg text-gray-700 mb-2">
+              <span className="font-bold">Date:</span>{" "}
+              {new Date(story.date).toLocaleDateString()}
+            </p>
+            {story.author && (
+              <p className="text-lg text-gray-700 mb-2">
+                <span className="font-bold">Author:</span> {story.author}
+              </p>
+            )}
+          </div>
+
+          {story.content && (
+            <div className="prose max-w-none text-gray-800 leading-7">
+              <span className="font-bold">Content:</span>
+              <p>{story.content}</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

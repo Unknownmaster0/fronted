@@ -23,6 +23,10 @@ import CreateEvent from "./components/Home/CreateEvent";
 import AccountPage from "./components/Account/AccountPage";
 import StoryDetailPage from "./components/Home/StoryDetailPage";
 import ViewUserJob from "./components/Job/ViewUserJob";
+import UpdateProfilePage from "./components/Profile/UpdateProfilePage";
+import Community from "./components/Community/Community";
+import Profile from "./components/Community/Profile";
+import Message from "./components/Community/Message";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +41,10 @@ const router = createBrowserRouter(
       <Route path="stories" element={<StoryPage />} />
       <Route path="stories/:id" element={<StoryDetailPage />} />
       <Route path="userjob" element={<ViewUserJob />} />
+      <Route path="updateProfilePage" element={<UpdateProfilePage />} />
+      <Route path="community" element={<Community />} />
+      <Route path="/profile/:id" element={<Profile />} />
+      <Route path="/message/:id" element={<Message />} />
 
       <Route
         path="jobpost"

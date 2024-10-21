@@ -1,0 +1,60 @@
+.message-container {
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Sent message bubble */
+.message-sent {
+  background-color: #e0f7fa;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  align-self: flex-end;
+}
+
+/* Received message bubble */
+.message-received {
+  background-color: #ffffff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  align-self: flex-start;
+}
+
+/* Input field container */
+.message-input-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* Input field for typing messages */
+.message-input {
+  flex-grow: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 10px;
+  outline: none;
+}
+
+/* Send button styling */
+.message-send-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-send-button:hover {
+  background-color: #2563eb;
+}

@@ -77,17 +77,16 @@ const Event = () => {
                 <span className="font-bold">Presenter:</span>{" "}
                 {event.presenter?.name || "N/A"}
               </p>
-              {event.presenter?.socialMediaLink && (
-                <p className="text-blue-500 hover:underline">
-                  <a
-                    href={event.presenter.socialMediaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Presenter Link
-                  </a>
-                </p>
-              )}
+              <p className="text-blue-500 hover:underline">
+                <a
+                  href={event.presenter.socialMediaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Presenter Social handle
+                </a>
+              </p>
+
               <p className="text-blue-500 hover:underline">
                 <a
                   href={event.linkToJoin}
@@ -97,6 +96,7 @@ const Event = () => {
                   Join Event
                 </a>
               </p>
+
               <p className="text-gray-600 mt-4">
                 <span className="font-bold">Contact:</span> {event.contactEmail}
               </p>
