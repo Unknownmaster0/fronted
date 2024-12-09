@@ -44,10 +44,10 @@ function Header() {
             <Link to="/programs-events" className="hover:underline">
               Programs & Events
             </Link>
-            <Link to="/storyform" className="hover:underline">
-              Stroy Form
+            <Link to="/createStory" className="hover:underline">
+              Create story
             </Link>
-            <Link to="/events" className="hover:underline">
+            <Link to="/event" className="hover:underline">
               Events
             </Link>
             <Link to="/stories" className="hover:underline">

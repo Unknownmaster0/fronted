@@ -56,7 +56,7 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="createstory"
+        path="/createstory"
         element={
           <StoryProvider>
             <CreateStory />
@@ -65,7 +65,7 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="joblist"
+        path="/joblist"
         element={
           <JobProvider>
             <JobList />
